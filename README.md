@@ -67,8 +67,8 @@ npm start
     - contains a list of patterns for git to lookout for and not consider versioning. ie .. node_modules/
 
 `./package-lock.json`
-    - this is where we "pin" our versions of all the dependencys we are using. 
-    - dependencys for our app are added at time of creation or when we npm install something.
+    - this is where we "pin" our versions of all the dependencies we are using. 
+    - dependencies for our app are added at time of creation or when we npm install something.
     - npm install will update this file and the package.json for us.
 
 `./package.json`
@@ -97,3 +97,6 @@ npm start
 `./README.md`
     - A file to spin new people up on the app/project. You will usually find things like install instructions
     and other resources here.
+
+`*.css`
+    - Imported as needed in to components; allows us to style a component.
