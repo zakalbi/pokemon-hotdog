@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Base Template
+Made with:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```javascript
+npx create-react-app 
+// you won't run this now
+```
+<br />
 
-## Available Scripts
+# Goal 
+1. Give Students a starting point with fewer files
+2. Comment out the files they are getting to aid learning...
+    *Files without comments have a brief description below.
+3. Make a starting place all the class can use for challenges/demos
 
-In the project directory, you can run:
+<br />
 
-### `npm start`
+# Getting Started
+Getting the code
+```bash
+git clone https://github.com/swftdev/base.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+After cloning change terminal location
+into the folder
+```bash
+cd base
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Installing Needed Node modules so the app
+can run
+```bash
+npm install
+```
 
-### `npm test`
+Opening your editor
+```bash
+code .
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Starting the server
+```bash
+npm start
+```
 
-### `npm run build`
+<br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Files without comments
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`./node_modules/*`
+    - a folder to hold all installs done by npm. npm knows what to install based on the package.json / package-lock.json 
+    - we don't push all the installs to github because a simple npm install will get them from the internet when we need.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`./public/favicon.ico`
+    - an icon to place in the title tab, it is linked in `./public/index.html`
 
-### `npm run eject`
+`./public/manifest.json`
+    - this file holds metadata for phones/browsers that helps them understand our app. We won't be working in this file much.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`./public/robots.txt`
+    - this file holds info for web crawlers and aids with things like seo (search engine optimization)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`./.eslintcache`
+    - this file is used to aid the linter in remembering it's prior config, and should be added to the .gitignore *it is already for us* 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`./.gitignore`
+    - contains a list of patterns for git to lookout for and not consider versioning. ie .. node_modules/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`./package-lock.json`
+    - this is where we "pin" our versions of all the dependencys we are using. 
+    - dependencys for our app are added at time of creation or when we npm install something.
+    - npm install will update this file and the package.json for us.
 
-## Learn More
+`./package.json`
+    - this is where npm will add a dependency after you type npm install
+    - this is where we declare "scripts" short words we want mapped to a longer command.
+    <br/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```javascript
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    // in package.json
 
-### Code Splitting
+        "scripts": {
+            "start": "react-scripts start"
+        }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+    // in terminal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+            v---v Key           v-----------------v  Value
+    npm run start      ->       react-scripts start
+    ^-----------^               ^-----------------^ 
+    What we type                What actually runs
+```
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`./README.md`
+    - A file to spin new people up on the app/project. You will usually find things like install instructions
+    and other resources here.
